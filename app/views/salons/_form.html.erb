@@ -1,37 +1,52 @@
 <%= form_for([@location, @location.salons.build]) do |f| %>
-  <p>
+  <% if @salon %>
+  <% if @salon.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= pluralize(@salon.errors.count, "error") %></h3>
+    <ul>
+      <% @salon.errors.full_messages.each do |msg| %>
+      <li class="text-warning"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <% end %>
+
+  <div class="container form-group">
     <%= f.label :名称 %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'React Native' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :主题 %><br>
-    <%= f.text_field :topic %>
-  </p>
-  <p>
+    <%= f.text_field :topic, class: 'form-control', placeholder: 'React Native：移动开发时代的巴别塔' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :时间 %><br>
-    <%= f.text_field :time %>
-  </p>
-  <p>
+    <%= f.text_field :time, class: 'form-control', placeholder: '2016-05-28T13:00-18:00' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :具体地址 %><br>
-    <%= f.text_area :detail_location %>
-  </p>
-  <p>
+    <%= f.text_field :detail_location, class: 'form-control', placeholder: '北京美餐网' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :详细信息 %><br>
-    <%= f.text_area :detail_info %>
-  </p>
-  <p>
+    <%= f.text_field :detail_info, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :分享嘉宾 %><br>
-    <%= f.text_area :guests %>
-  </p>
-  <p>
+    <%= f.text_field :guests, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :附加信息 %><br>
-    <%= f.text_area :help %>
-  </p>
-  <p>
+    <%= f.text_field :help, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :关于 %><br>
-    <%= f.text_area :about %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+    <%= f.text_field :about, class: 'form-control', value: '我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。' %>
+  </div>
+
+  <div class="container text-center">
+    <%= f.submit :创建新一期沙龙, class: 'btn btn-default' %>
+    <%= link_to '取消', location_path(@location) , class: 'btn btn-info' %>
+  </div>
 <% end %>

@@ -1,25 +1,26 @@
+<div class="container">
 <%= form_for @location do |f| %>
   <% if @location.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@article.errors.count, "error") %></h2>
+    <h3><%= pluralize(@location.errors.count, "error") %></h3>
     <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+    <% @location.errors.full_messages.each do |msg| %>
+      <li class="text-warning"><%= msg %></li>
     <% end %>
     </ul>
   </div>
   <% end %>
-  <p>
+  <div class="container form-group">
     <%= f.label :据点 %><br>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
+    <%= f.text_field :name, class: 'form-control', placeholder: '北京' %>
+  </div>
+  <!-- <div class="container form-group">
     <%= f.label :密码 %><br>
-    <%= f.text_field :password %>
-  </p>
-
-  <p>
-    <%= f.submit :保存据点 %>
-  </p>
+    <%= f.text_field :password, class: 'form-control', id: "disabledInput" %>
+  </div> -->
+  <div class="container text-center">
+    <%= f.submit :保存据点, class: 'btn btn-default' %>
+    <%= link_to '取消', locations_path, class: 'btn btn-info' %>
+  </div>
+</div>
 <% end %>

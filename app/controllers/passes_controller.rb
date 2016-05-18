@@ -1,10 +1,4 @@
-# require 'sinatra'
-# require 'active_support/json/encoding'
-# require 'passbook'
-
 require 'sign_pass'
-# require 'securerandom'
-# require 'sign_pass'
 
 class PassesController < ApplicationController
   def new

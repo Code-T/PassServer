@@ -2,8 +2,6 @@ class SalonsController < ApplicationController
 
   def new
     @salon = Salon.new
-    # @location = Location.find(params[:location_id])
-    # @salon = @location.salons.new
   end
 
   def create
@@ -14,11 +12,16 @@ class SalonsController < ApplicationController
       redirect_to @location
     else
       render 'new'
+      # redirect_to @location
     end
   end
 
   def show
     # @location = Location.find(params[:location_id])
+    @salon = Salon.find(params[:id])
+  end
+
+  def edit
     @salon = Salon.find(params[:id])
   end
 

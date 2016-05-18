@@ -1,18 +1,27 @@
-<h1>我们的根据地</h1>
+<div class="container">
+<h1>T</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th>根据地</th>
+    <th>我们的根据地</th>
   </tr>
 
   <% @locations.each do |location| %>
     <tr>
       <td><%= link_to location.name, location_path(location) %></td>
-      <!-- <td><%= link_to 'Edit', edit_location_path(location) %></td> -->
-      <td><%= link_to '删除', location_path(location),
-                    method: :delete, data: { confirm: '真的吗。。。' } %></td>
+      <td>
+        <%= link_to '编辑', edit_location_path(location),
+                    class: "btn btn-default" %>
+        <%= link_to '删除', location_path(location),
+                    method: :delete, data: { confirm: '真的吗。。。' },
+                    class: "btn btn-danger" %>
+      </td>
     </tr>
   <% end %>
 </table>
+</div>
 
-<%= link_to '创建新据点', new_location_path %>
+<div class="container text-center">
+<%= link_to '创建新据点', new_location_path,
+                class: "btn btn-success" %>
+</div>

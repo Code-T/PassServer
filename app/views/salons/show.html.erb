@@ -1,10 +1,14 @@
-<p>
-  <strong>沙龙活动:</strong>
-  <%= link_to @salon.name, location_path %>
-</p>
+<div class="container">
 
-<h2>沙龙 Pass 用户</h2>
+<h2>
+  <%= @salon.name %>
+  <!-- <small><%= link_to '编辑', edit_salon_path, class: 'btn btn-link disabled' %></small> -->
+  <small><%= link_to @salon.location.name, location_path(@salon.location) %></small>
+</h2>
+
+<h3>沙龙 Pass 用户:</h3>
 <%= render @salon.passes %>
 
-<h2>添加一名 Pass 用户:</h2>
+<h3>添加一名 Pass 用户:</h3>
 <%= render "passes/form" %>
+</div>

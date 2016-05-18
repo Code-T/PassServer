@@ -1,13 +1,13 @@
-<p>
-  <strong>据点:</strong>
-  <%= @location.name %>
-</p>
+<div class="container">
+  <h2>
+    <%= @location.name %>
+    <small><%= link_to '编辑', edit_location_path(@location) %></small>
+    <small><%= link_to '据点列表', locations_path %></small>
+  </h2>
 
-<h2>沙龙活动</h2>
+<h3>沙龙活动</h2>
 <%= render @location.salons %>
 
-<h2>添加一期沙龙活动:</h2>
+<h3>添加一期沙龙活动:</h3>
 <%= render "salons/form" %>
-
-<%= link_to '编辑', edit_location_path(@location) %>
-<%= link_to '据点列表', locations_path %>
+</div>

@@ -1,11 +1,11 @@
-working_directory "/root/PassServer/"
+working_directory "/home/PassServer/"
 
-pid "/root/PassServer/tmp/pids/unicorn.pid"
+pid "/home/PassServer/tmp/pids/unicorn.pid"
 
-stderr_path "/root/PassServer/log/unicornerr.log"
-stdout_path "/root/PassServer/log/unicornout.log"
+stderr_path "/home/PassServer/log/unicornerr.log"
+stdout_path "/home/PassServer/log/unicornout.log"
 
-listen "/root/PassServer/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/home/PassServer/tmp/sockets/unicorn.sock", :backlog => 64
 listen 3032, :tcp_nopush => true
 
 worker_processes 2
