@@ -1,0 +1,50 @@
+I, [2016-05-17T16:58:48.463501 #6491]  INFO -- : Refreshing Gem list
+I, [2016-05-17T16:58:49.830623 #6491]  INFO -- : listening on addr=/root/PassServer/tmp/sockets/unicorn.sock fd=11
+I, [2016-05-17T16:58:49.830999 #6491]  INFO -- : listening on addr=0.0.0.0:3032 fd=12
+I, [2016-05-17T16:58:49.833904 #6491]  INFO -- : master process ready
+I, [2016-05-17T16:58:49.834092 #6494]  INFO -- : worker=0 ready
+I, [2016-05-17T16:58:49.835534 #6497]  INFO -- : worker=1 ready
+/usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:195:in `pid=': Already running on PID:6491 (or pid=/root/PassServer/tmp/pids/unicorn.pid is stale) (ArgumentError)
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:127:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn_rails:209:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:195:in `pid=': Already running on PID:6491 (or pid=/root/PassServer/tmp/pids/unicorn.pid is stale) (ArgumentError)
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:127:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn_rails:209:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-05-17T17:23:12.465348 #6491]  INFO -- : reaped #<Process::Status: pid 6494 exit 0> worker=0
+I, [2016-05-17T17:23:12.465573 #6491]  INFO -- : reaped #<Process::Status: pid 6497 exit 0> worker=1
+I, [2016-05-17T17:23:12.465704 #6491]  INFO -- : master complete
+I, [2016-05-17T17:23:27.822202 #8096]  INFO -- : Refreshing Gem list
+I, [2016-05-17T17:23:29.109103 #8096]  INFO -- : unlinking existing socket=/root/PassServer/tmp/sockets/unicorn.sock
+I, [2016-05-17T17:23:29.109258 #8096]  INFO -- : listening on addr=/root/PassServer/tmp/sockets/unicorn.sock fd=11
+I, [2016-05-17T17:23:29.109514 #8096]  INFO -- : listening on addr=0.0.0.0:3032 fd=12
+I, [2016-05-17T17:23:29.109650 #8096]  INFO -- : listening on addr=0.0.0.0:13000 fd=13
+I, [2016-05-17T17:23:29.112350 #8096]  INFO -- : master process ready
+I, [2016-05-17T17:23:29.113368 #8099]  INFO -- : worker=0 ready
+I, [2016-05-17T17:23:29.115676 #8102]  INFO -- : worker=1 ready
+/usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:195:in `pid=': Already running on PID:8096 (or pid=/root/PassServer/tmp/pids/unicorn.pid is stale) (ArgumentError)
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:127:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn_rails:209:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/unicorn_rails:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /usr/local/rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2016-05-17T17:24:58.405218 #8096]  INFO -- : reaped #<Process::Status: pid 8099 exit 0> worker=0
+I, [2016-05-17T17:24:58.405409 #8096]  INFO -- : reaped #<Process::Status: pid 8102 exit 0> worker=1
+I, [2016-05-17T17:24:58.405663 #8096]  INFO -- : master complete
+I, [2016-05-17T17:25:01.133845 #8211]  INFO -- : unlinking existing socket=/root/PassServer/tmp/sockets/unicorn.sock
+I, [2016-05-17T17:25:01.134167 #8211]  INFO -- : listening on addr=/root/PassServer/tmp/sockets/unicorn.sock fd=10
+I, [2016-05-17T17:25:01.134536 #8211]  INFO -- : listening on addr=0.0.0.0:3032 fd=11
+I, [2016-05-17T17:25:01.134629 #8211]  INFO -- : listening on addr=0.0.0.0:13000 fd=12
+I, [2016-05-17T17:25:01.135876 #8214]  INFO -- : Refreshing Gem list
+I, [2016-05-17T17:25:01.146197 #8211]  INFO -- : master process ready
+I, [2016-05-17T17:25:01.148830 #8217]  INFO -- : Refreshing Gem list
+I, [2016-05-17T17:25:02.430588 #8214]  INFO -- : worker=0 ready
+I, [2016-05-17T17:25:02.470215 #8217]  INFO -- : worker=1 ready

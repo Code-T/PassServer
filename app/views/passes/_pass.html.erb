@@ -1,0 +1,29 @@
+<p>
+  <strong>Pass 用户名称:</strong>
+  <%= pass.user_name %>
+</p>
+
+<p>
+  <strong>Pass 序列号:</strong>
+  <%= pass.serial_number %>
+</p>
+
+<p>
+  <strong>Pass 手机号:</strong>
+  <%= pass.user_phone_number %>
+</p>
+
+<p>
+  <strong>Pass 类型:</strong>
+  <%= pass.user_type %>
+</p>
+
+<p>
+  <%= link_to '下载 Pass', pass_path(pass) %>
+</p>
+
+<p>
+  <%= link_to '删除 Pass', [pass.salon, pass],
+               method: :delete,
+               data: { confirm: '确定删除该 Pass 吗？' } %>
+</p>

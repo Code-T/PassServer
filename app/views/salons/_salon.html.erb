@@ -1,0 +1,20 @@
+<p>
+  <strong>沙龙名称:</strong>
+  <%= link_to salon.name, [salon.location, salon] %>
+</p>
+
+<p>
+  <strong>沙龙主题:</strong>
+  <%= salon.topic %>
+</p>
+
+<p>
+  <strong>沙龙时间:</strong>
+  <%= salon.time %>
+</p>
+
+<p>
+  <%= link_to '删除沙龙', [salon.location, salon],
+               method: :delete,
+               data: { confirm: '确定删除本期沙龙吗？' } %>
+</p>

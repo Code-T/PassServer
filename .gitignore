@@ -9,6 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+/vendor/Certificate/
+/public/assets/
 
 ## Specific to RubyMotion:
 .dat*

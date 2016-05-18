@@ -1,0 +1,38 @@
+<h2>添加一期沙龙活动:</h2>
+<%= form_for([@location, @location.salons.build]) do |f| %>
+  <p>
+    <%= f.label :名称 %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :主题 %><br>
+    <%= f.text_field :topic %>
+  </p>
+  <p>
+    <%= f.label :时间 %><br>
+    <%= f.text_field :time %>
+  </p>
+  <p>
+    <%= f.label :具体地址 %><br>
+    <%= f.text_area :detail_location %>
+  </p>
+  <p>
+    <%= f.label :详细信息 %><br>
+    <%= f.text_area :detail_info %>
+  </p>
+  <p>
+    <%= f.label :分享嘉宾 %><br>
+    <%= f.text_area :guests %>
+  </p>
+  <p>
+    <%= f.label :附加信息 %><br>
+    <%= f.text_area :help %>
+  </p>
+  <p>
+    <%= f.label :关于 %><br>
+    <%= f.text_area :about %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

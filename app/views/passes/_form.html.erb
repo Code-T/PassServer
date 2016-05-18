@@ -1,0 +1,17 @@
+<%= form_for([@salon, @salon.passes.build]) do |f| %>
+  <p>
+    <%= f.label :昵称 %><br>
+    <%= f.text_field :user_name %>
+  </p>
+  <p>
+    <%= f.label :手机号 %><br>
+    <%= f.text_field :user_phone_number %>
+  </p>
+  <p>
+    <%= f.label :类型 %><br>
+    <%= f.text_field :user_type %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

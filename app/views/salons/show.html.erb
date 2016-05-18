@@ -1,0 +1,10 @@
+<p>
+  <strong>沙龙活动:</strong>
+  <%= link_to @salon.name, location_path %>
+</p>
+
+<h2>沙龙 Pass 用户</h2>
+<%= render @salon.passes %>
+
+<h2>添加一名 Pass 用户:</h2>
+<%= render "passes/form" %>

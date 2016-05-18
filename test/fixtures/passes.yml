@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  serial_number: MyString
+  authentication_token: MyString
+  barcode_message: MyString
+  user_name: MyString
+  user_phone_number: MyString
+  user_type: MyString
+  salon_id: 
+
+two:
+  serial_number: MyString
+  authentication_token: MyString
+  barcode_message: MyString
+  user_name: MyString
+  user_phone_number: MyString
+  user_type: MyString
+  salon_id: 

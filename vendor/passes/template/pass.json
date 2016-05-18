@@ -1,0 +1,90 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.gg.swift.t",
+  "serialNumber": "dce5eed60da0d5e9488bdbecbe4e92a5",
+  "teamIdentifier": "9Y9KG3KBHJ",
+  "authenticationToken": "fd79d027b179b6468f503e4037e11925",
+  "relevantDate": "",
+  "locations": [
+    {
+      "longitude": 116.309178,
+      "latitude": 39.934223,
+      "relevantText": "欢迎参加 <T> 沙龙"
+    }
+  ],
+  "beacons": [
+    {
+      "proximityUUID": "0799C260-13F7-45BA-9C7E-36BF0E398548",
+      "relevantText": "欢迎参加 <T> 沙龙",
+      "name": "<T>"
+    }
+  ],
+  "barcode": {
+    "message": "a9ecc0a71f652fc75d69ea36e0ab6a84",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "UTF-8"
+  },
+  "organizationName": "<T> 社区",
+  "description": "<T> 沙龙 Ticket",
+  "logoText": "<T> 沙龙",
+  "foregroundColor": "rgb(45, 45, 45)",
+  "backgroundColor": "rgb(250, 250, 250)",
+  "eventTicket": {
+    "headerFields": [
+      {
+        "key": "version",
+        "label": "地区",
+        "value": "北京"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "topic",
+        "label": "<T> 主题",
+        "value": "React Native：移动开发时代的巴别塔"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "345678",
+        "label": "<T> 负责人",
+        "value": "KT"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "location",
+        "label": "地点",
+        "value": ""
+      },
+      {
+        "key": "date",
+        "label": "时间",
+        "value": ""
+      }
+    ],
+    "backFields": [
+      {
+        "key": "locationInfo",
+        "label": "详细信息",
+        "value": "",
+        "attributedValue": "<a href='http://t.swift.gg/d/48-react-native'>React Native：移动开发时代的巴别塔</a>"
+      },
+      {
+        "key": "topicInfo",
+        "label": "分享嘉宾",
+        "value": ""
+      },
+      {
+        "key": "servicePhone",
+        "label": "负责人联系方式",
+        "value": ""
+      },
+      {
+        "key": "servicePhone",
+        "label": "关于 <T>",
+        "value": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+<h1>我们的根据地</h1>
+
+<table>
+  <tr>
+    <th>根据地</th>
+  </tr>
+
+  <% @locations.each do |location| %>
+    <tr>
+      <td><%= link_to location.name, location_path(location) %></td>
+      <!-- <td><%= link_to 'Edit', edit_location_path(location) %></td> -->
+      <td><%= link_to '删除', location_path(location),
+                    method: :delete, data: { confirm: '真的吗。。。' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to '创建新据点', new_location_path %>
