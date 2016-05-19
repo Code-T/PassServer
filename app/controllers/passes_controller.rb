@@ -85,6 +85,7 @@ class PassesController < ApplicationController
   end
 
   def download
+    @pass = Pass.find(params[:serial_number])
   end
 
   def destroy

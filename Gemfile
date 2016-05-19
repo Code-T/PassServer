@@ -1,9 +1,7 @@
 source 'https://ruby.taobao.org'
 
-gem 'passbook'
-# gem 'sinatra'
 gem 'zip-zip'
-
+gem 'bootstrap-sass'
 gem 'sign_pass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
