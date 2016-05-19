@@ -85,7 +85,7 @@ class PassesController < ApplicationController
   end
 
   def download
-    @pass = Pass.find(params[:serial_number])
+    render @pass = Pass.where(["serial_number = :p", { p: params[:serial_number] }]).first
   end
 
   def destroy
@@ -111,4 +111,5 @@ class PassesController < ApplicationController
     def new_barcode_message
       SecureRandom.hex
     end
+
 end

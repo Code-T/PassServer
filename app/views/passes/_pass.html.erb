@@ -15,6 +15,8 @@
 <div class="container text-center">
   <%= link_to '添加到 Wallet', pass_path(pass),
               class: "btn btn-link" %>
+  <%= link_to '下载', "passes/download",
+              class: "btn btn-link" %>
   <%= link_to '删除 Pass', [pass.salon, pass],
                method: :delete,
                data: { confirm: '确定删除该 Pass 吗？' },
