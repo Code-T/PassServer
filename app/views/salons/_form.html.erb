@@ -29,24 +29,48 @@
     <%= f.text_field :detail_location, class: 'form-control', placeholder: '北京美餐网' %>
   </div>
   <div class="container form-group">
+    <%= f.label :经度longitude %><br>
+    <%= f.text_field :longitude, class: 'form-control', placeholder: '116.309178' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label :维度latitude %><br>
+    <%= f.text_field :latitude, class: 'form-control', placeholder: '39.934223' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label "iBeaconUUID(可选)" %><br>
+    <%= f.text_field :iBeacon, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label :文字颜色 %><br>
+    <%= f.text_field :foreground_color, class: 'form-control', placeholder: 'rgb(45, 45, 45)', value: 'rgb(45, 45, 45)' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label :背景色 %><br>
+    <%= f.text_field :background_color, class: 'form-control', placeholder: 'rgb(250, 250, 250)', value: 'rgb(250, 250, 250)' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :详细信息 %><br>
-    <%= f.text_field :detail_info, class: 'form-control' %>
+    <%= f.text_area :detail_info, class: 'form-control' %>
   </div>
   <div class="container form-group">
     <%= f.label :分享嘉宾 %><br>
-    <%= f.text_field :guests, class: 'form-control' %>
+    <%= f.text_area :guests, class: 'form-control' %>
   </div>
   <div class="container form-group">
     <%= f.label :附加信息 %><br>
-    <%= f.text_field :help, class: 'form-control' %>
+    <%= f.text_area :help, class: 'form-control' %>
   </div>
   <div class="container form-group">
     <%= f.label :关于 %><br>
-    <%= f.text_field :about, class: 'form-control', value: '我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。' %>
+    <%= f.text_area :about, class: 'form-control', value: '我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。' %>
   </div>
-
   <div class="container text-center">
     <%= f.submit :创建新一期沙龙, class: 'btn btn-default' %>
     <%= link_to '取消', location_path(@location) , class: 'btn btn-info' %>
   </div>
 <% end %>
+
+<!-- t.text     "detail_info"
+t.text     "guests"
+t.text     "help"
+t.text     "about" -->

@@ -4,11 +4,17 @@ class CreateSalons < ActiveRecord::Migration
       t.string :name
       t.string :topic
       t.string :detail_location
+      t.string :longitude
+      t.string :latitude
       t.string :time
+      t.string :foreground_color
+      t.string :background_color
+      t.string :iBeacon
       t.text :detail_info
       t.text :guests
       t.text :help
       t.text :about
+
       t.references :location, index: true, foreign_key: true
 
       t.timestamps null: false

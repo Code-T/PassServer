@@ -34,6 +34,6 @@ class SalonsController < ApplicationController
 
   private
     def salon_params
-      params.require(:salon).permit(:name, :topic, :detail_location, :time, :detail_info, :guests, :help, :about)
+      params.require(:salon).permit(:name, :topic, :detail_location, :time, :detail_info, :guests, :help, :about, :longitude, :latitude, :foreground_color, :background_color, :iBeacon)
     end
 end

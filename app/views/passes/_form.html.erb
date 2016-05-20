@@ -13,8 +13,24 @@
   <% end %>
 
   <div class="container form-group">
+    <%= f.label :姓名 %><br>
+    <%= f.text_field :real_name, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
     <%= f.label :昵称 %><br>
-    <%= f.text_field :user_name, class: 'form-control' %>
+    <%= f.text_field :user_name, class: 'form-control' , placeholder: '没有就和姓名添一样的吧'%>
+  </div>
+  <div class="container form-group">
+    <%= f.label :所在公司 %><br>
+    <%= f.text_field :company_name, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label :GitHubID %><br>
+    <%= f.text_field :github_id, class: 'form-control' %>
+  </div>
+  <div class="container form-group">
+    <%= f.label :邮箱 %><br>
+    <%= f.text_field :mail, class: 'form-control' %>
   </div>
   <div class="container form-group">
     <%= f.label :手机号 %><br>
@@ -22,8 +38,9 @@
   </div>
   <div class="container form-group">
     <%= f.label :类型 %><br>
-    <%= f.text_field :user_type, class: 'form-control', placeholder: '负责人,分享嘉宾,参与者' %>
+    <%= f.text_field :user_type, class: 'form-control', placeholder: '负责人,分享嘉宾,特别邀请' %>
   </div>
+
   <div class="container text-center">
     <%= f.submit :创建Pass, class: 'btn btn-default' %>
     <%= link_to '取消', salon_path(@salon) , class: 'btn btn-info' %>

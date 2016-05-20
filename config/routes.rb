@@ -23,11 +23,12 @@ Rails.application.routes.draw do
       resources :passes #, shallow: true
     end
 
-    resources :passes do |pass|
-      get 'download' => 'pass#download'
-    end
+    resources :passes
 
-  # Example resource route with options:
+    get 'download/:serial_number' , to: 'passes#download', as: 'download'
+    get 'wallet/:serial_number' , to: 'passes#wallet', as: 'wallet'
+    get 'check/:barcode_message' , to: 'passes#check', as: 'check_pass'
+
   #   resources :products do
   #     member do
   #       get 'short'

@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 20160516160124) do
     t.string   "user_name"
     t.string   "user_phone_number"
     t.string   "user_type"
+    t.string   "real_name"
+    t.string   "company_name"
+    t.string   "github_id"
+    t.string   "mail"
     t.integer  "salon_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
@@ -38,14 +42,19 @@ ActiveRecord::Schema.define(version: 20160516160124) do
     t.string   "name"
     t.string   "topic"
     t.string   "detail_location"
+    t.string   "longitude"
+    t.string   "latitude"
     t.string   "time"
+    t.string   "foreground_color"
+    t.string   "background_color"
+    t.string   "iBeacon"
     t.text     "detail_info"
     t.text     "guests"
     t.text     "help"
     t.text     "about"
     t.integer  "location_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   add_index "salons", ["location_id"], name: "index_salons_on_location_id"
