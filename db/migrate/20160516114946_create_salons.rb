@@ -4,8 +4,8 @@ class CreateSalons < ActiveRecord::Migration
       t.string :name
       t.string :topic
       t.string :detail_location
-      t.string :longitude
-      t.string :latitude
+      t.float :longitude
+      t.float :latitude
       t.string :time
       t.string :foreground_color
       t.string :background_color

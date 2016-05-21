@@ -48359,3 +48359,978 @@ Processing by LocationsController#show as HTML
   Rendered salons/_form.html.erb (5.4ms)
   Rendered locations/show.html.erb within layouts/application (8.6ms)
 Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-21 08:13:19 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 394ms (Views: 382.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/locations.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/welcome.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/passes.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/salons.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/passes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/salons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:20 +0800
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:13:23 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.2ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (2.3ms)
+  Rendered salons/_form.html.erb (16.7ms)
+  Rendered locations/show.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 102ms (Views: 86.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/locations/1/salons/1" for 127.0.0.1 at 2016-05-21 08:13:24 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"location_id"=>"1", "id"=>"1"}
+  [1m[36mSalon Load (0.2ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPass Load (0.1ms)[0m  [1mSELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?[0m  [["salon_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered passes/_form.html.erb (12.8ms)
+  Rendered salons/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:13:37 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aNhDjJxsFjf0Y8oLjpL2hSLQltfv1vYLS5AQUrcLHoGzfwA3O5/H/S5AKZWJUIKA2FIjRampEwnhIXrdUmom0Q==", "pass"=>{"real_name"=>"Dd", "user_name"=>"Dd", "company_name"=>"", "github_id"=>"Dd", "mail"=>"D", "user_phone_number"=>"", "user_type"=>""}, "commit"=>"创建Pass", "salon_id"=>"1"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered passes/_form.html.erb (4.8ms)
+  Rendered passes/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 67ms (Views: 60.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:13:50 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ujtnj4e6JSY+RLa5AlWO1K8neulldJxQZIppbAGHLOSJnCQ0IEn07ORnVScFl/rRVaXPeyMLeVLOOwPj5OYUtA==", "pass"=>{"real_name"=>"D", "user_name"=>"D", "company_name"=>"D", "github_id"=>"Dd", "mail"=>"Dd", "user_phone_number"=>"", "user_type"=>""}, "commit"=>"创建Pass", "salon_id"=>"1"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered passes/_form.html.erb (6.9ms)
+  Rendered passes/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-21 08:13:57 +0800
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/salons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:13:57 +0800
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:13:59 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.4ms)
+  Rendered salons/_form.html.erb (4.6ms)
+  Rendered locations/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations/1/salons/1" for 127.0.0.1 at 2016-05-21 08:14:01 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"location_id"=>"1", "id"=>"1"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPass Load (0.0ms)[0m  [1mSELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?[0m  [["salon_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered passes/_form.html.erb (2.4ms)
+  Rendered salons/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:14:02 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oVj/9kKRN9yikRdLHacSg7i5hfRshxHTs+/q8ufzGzVJkNaHS6m78U2qOFFHUcFhvfSIi/lTRlTrLySXKxp6OA==", "pass"=>{"real_name"=>"d", "user_name"=>"", "company_name"=>"", "github_id"=>"", "mail"=>"", "user_phone_number"=>"", "user_type"=>""}, "commit"=>"创建Pass", "salon_id"=>"1"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered passes/_form.html.erb (3.9ms)
+  Rendered passes/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:14:08 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3+NwbFRc58lwZt+UNM8ShBt4aNQnTTQjWDLd/9Pm6cc3K1kdXWRr5J9d8I5uOcFmHjVlq7KZY6QA8hOaHw+Iyg==", "pass"=>{"real_name"=>"d", "user_name"=>"d", "company_name"=>"d", "github_id"=>"d", "mail"=>"d", "user_phone_number"=>"d", "user_type"=>"d"}, "commit"=>"创建Pass", "salon_id"=>"1"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "passes" ("user_name", "user_phone_number", "user_type", "real_name", "company_name", "github_id", "mail", "salon_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_name", "d"], ["user_phone_number", "d"], ["user_type", "d"], ["real_name", "d"], ["company_name", "d"], ["github_id", "d"], ["mail", "d"], ["salon_id", 1], ["created_at", "2016-05-21 00:14:08.785626"], ["updated_at", "2016-05-21 00:14:08.785626"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "passes" SET "serial_number" = ?, "authentication_token" = ?, "barcode_message" = ?, "updated_at" = ? WHERE "passes"."id" = ?  [["serial_number", "b644627e960977244ec71a2cdcc66086"], ["authentication_token", "c2ecdd5d6df61da32a953e484efd92c4"], ["barcode_message", "7d841419fc7cba46bf911ea50b00aa1e"], ["updated_at", "2016-05-21 00:14:08.788984"], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/salons/1
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/salons/1" for 127.0.0.1 at 2016-05-21 08:14:08 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.1ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 1]]
+  Rendered passes/_pass.html.erb (0.9ms)
+  Rendered passes/_form.html.erb (2.4ms)
+  Rendered salons/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wallet/b644627e960977244ec71a2cdcc66086" for 127.0.0.1 at 2016-05-21 08:14:10 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"b644627e960977244ec71a2cdcc66086"}
+  [1m[36mPass Load (0.2ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = 'b644627e960977244ec71a2cdcc66086')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/passes_controller.rb:104:in `+'
+  app/controllers/passes_controller.rb:104:in `get_pass_file_path'
+  app/controllers/passes_controller.rb:29:in `wallet'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.9ms)
+
+
+Started GET "/wallet/b644627e960977244ec71a2cdcc66086" for 127.0.0.1 at 2016-05-21 08:14:10 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"b644627e960977244ec71a2cdcc66086"}
+  [1m[35mPass Load (0.1ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = 'b644627e960977244ec71a2cdcc66086')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/passes_controller.rb:104:in `+'
+  app/controllers/passes_controller.rb:104:in `get_pass_file_path'
+  app/controllers/passes_controller.rb:29:in `wallet'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started GET "/download/b644627e960977244ec71a2cdcc66086" for 127.0.0.1 at 2016-05-21 08:14:19 +0800
+Processing by PassesController#download as HTML
+  Parameters: {"serial_number"=>"b644627e960977244ec71a2cdcc66086"}
+  [1m[36mPass Load (0.2ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = 'b644627e960977244ec71a2cdcc66086')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/passes_controller.rb:104:in `+'
+  app/controllers/passes_controller.rb:104:in `get_pass_file_path'
+  app/controllers/passes_controller.rb:36:in `download'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.5ms)
+
+
+Started GET "/download/b644627e960977244ec71a2cdcc66086" for 127.0.0.1 at 2016-05-21 08:14:20 +0800
+Processing by PassesController#download as HTML
+  Parameters: {"serial_number"=>"b644627e960977244ec71a2cdcc66086"}
+  [1m[35mPass Load (0.3ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = 'b644627e960977244ec71a2cdcc66086')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/passes_controller.rb:104:in `+'
+  app/controllers/passes_controller.rb:104:in `get_pass_file_path'
+  app/controllers/passes_controller.rb:36:in `download'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (73.0ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:14:31 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.4ms)
+  Rendered salons/_form.html.erb (3.9ms)
+  Rendered locations/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/locations/1/salons/1" for 127.0.0.1 at 2016-05-21 08:14:33 +0800
+Processing by SalonsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BDxjSQixL0/2FJJ8aFoY8yUaeD7qnMBMY0CknuVA6Ifs9Eo4AYmjYhkvvWYyrMsRIFd1QX9Il8s7gGr7KamJig==", "location_id"=>"1", "id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."location_id" = ? AND "salons"."id" = ? LIMIT 1  [["location_id", 1], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPass Load (0.1ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "passes" WHERE "passes"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "salons" WHERE "salons"."id" = ?  [["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/locations/1
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:14:33 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSalon Load (0.0ms)[0m  [1mSELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered salons/_form.html.erb (5.0ms)
+  Rendered locations/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/locations/1/salons" for 127.0.0.1 at 2016-05-21 08:14:50 +0800
+Processing by SalonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KM7u+eKGxh4YEm3cO36vr/InJ8Mev8tkjBHS9EXHHLnABseI675KM/cpQsZhiHxN92oqvItrnOPU0RyRiS59tA==", "salon"=>{"name"=>"fff", "topic"=>"fff", "time"=>"2016-05-28T13:00-18:00", "detail_location"=>"dd", "longitude"=>"123", "latitude"=>"33", "iBeacon"=>"", "foreground_color"=>"rgb(45, 45, 45)", "background_color"=>"rgb(250, 250, 250)", "detail_info"=>"dd", "guests"=>"dd", "help"=>"dd", "about"=>"我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。"}, "commit"=>"创建新一期沙龙", "location_id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "salons" ("name", "topic", "detail_location", "time", "detail_info", "guests", "help", "about", "longitude", "latitude", "foreground_color", "background_color", "iBeacon", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "fff"], ["topic", "fff"], ["detail_location", "dd"], ["time", "2016-05-28T13:00-18:00"], ["detail_info", "dd"], ["guests", "dd"], ["help", "dd"], ["about", "我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。"], ["longitude", "123"], ["latitude", "33"], ["foreground_color", "rgb(45, 45, 45)"], ["background_color", "rgb(250, 250, 250)"], ["iBeacon", ""], ["location_id", 1], ["created_at", "2016-05-21 00:14:50.256970"], ["updated_at", "2016-05-21 00:14:50.256970"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/locations/1
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:14:50 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.4ms)
+  Rendered salons/_form.html.erb (12.5ms)
+  Rendered locations/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/locations/1/salons/2" for 127.0.0.1 at 2016-05-21 08:14:52 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"location_id"=>"1", "id"=>"2"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.0ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered passes/_form.html.erb (2.8ms)
+  Rendered salons/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/salons/2/passes" for 127.0.0.1 at 2016-05-21 08:14:57 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SWbK4QodvKQrp8wlxR938s0Xs/2A7rUHFYh4hzXt7POhruOQAyUwicSc4z+f6aQQyFq+ghU64oBNSLbi+QSN/g==", "pass"=>{"real_name"=>"d", "user_name"=>"d", "company_name"=>"d", "github_id"=>"d", "mail"=>"d", "user_phone_number"=>"d", "user_type"=>"d"}, "commit"=>"创建Pass", "salon_id"=>"2"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passes" ("user_name", "user_phone_number", "user_type", "real_name", "company_name", "github_id", "mail", "salon_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_name", "d"], ["user_phone_number", "d"], ["user_type", "d"], ["real_name", "d"], ["company_name", "d"], ["github_id", "d"], ["mail", "d"], ["salon_id", 2], ["created_at", "2016-05-21 00:14:57.744410"], ["updated_at", "2016-05-21 00:14:57.744410"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "passes" SET "serial_number" = ?, "authentication_token" = ?, "barcode_message" = ?, "updated_at" = ? WHERE "passes"."id" = ?  [["serial_number", "9f02c11f5dfd5fb3f6d6c9fd75590e24"], ["authentication_token", "f15319bb99e7a62e0fe9a33e69b05648"], ["barcode_message", "67f80ee5c872735fb919f7a3cd301621"], ["updated_at", "2016-05-21 00:14:57.746897"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/salons/2
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/salons/2" for 127.0.0.1 at 2016-05-21 08:14:57 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.1ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 2]]
+  Rendered passes/_pass.html.erb (0.3ms)
+  Rendered passes/_form.html.erb (2.6ms)
+  Rendered salons/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:15:02 +0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for PassesController):
+  actionpack (4.2.6) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-21 08:15:04 +0800
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered locations/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-21 08:15:05 +0800
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:15:06 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.4ms)
+  Rendered salons/_form.html.erb (4.1ms)
+  Rendered locations/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations/1/salons/2" for 127.0.0.1 at 2016-05-21 08:15:07 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"location_id"=>"1", "id"=>"2"}
+  [1m[36mSalon Load (0.3ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPass Load (0.1ms)[0m  [1mSELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?[0m  [["salon_id", 2]]
+  Rendered passes/_pass.html.erb (1.1ms)
+  Rendered passes/_form.html.erb (2.6ms)
+  Rendered salons/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wallet/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:09 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[35mPass Load (0.2ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/wallet/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:09 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[36mPass Load (0.3ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/download/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:19 +0800
+Processing by PassesController#download as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[35mPass Load (0.5ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.3ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 18ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/download/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:19 +0800
+Processing by PassesController#download as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[36mPass Load (0.1ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/wallet/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:22 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[35mPass Load (0.3ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.2ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 14ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/wallet/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:22 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[36mPass Load (0.1ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.0ms)
+Completed 200 OK in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/download/9f02c11f5dfd5fb3f6d6c9fd75590e24" for 127.0.0.1 at 2016-05-21 08:15:33 +0800
+Processing by PassesController#download as */*
+  Parameters: {"serial_number"=>"9f02c11f5dfd5fb3f6d6c9fd75590e24"}
+  [1m[35mPass Load (0.2ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '9f02c11f5dfd5fb3f6d6c9fd75590e24')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//9f02c11f5dfd5fb3f6d6c9fd75590e24.pkpass (0.1ms)
+Completed 200 OK in 19ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/salons/2" for 127.0.0.1 at 2016-05-21 08:20:35 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SalonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSalon Load (0.2ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.1ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 2]]
+  Rendered passes/_pass.html.erb (2.0ms)
+  Rendered passes/_form.html.erb (14.9ms)
+  Rendered salons/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 430ms (Views: 396.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:20:39 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.2ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (2.1ms)
+  Rendered salons/_form.html.erb (14.5ms)
+  Rendered locations/show.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2016-05-21 08:20:40 +0800
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered locations/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:20:41 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSalon Load (0.2ms)[0m  [1mSELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.4ms)
+  Rendered salons/_form.html.erb (4.6ms)
+  Rendered locations/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2016-05-21 08:20:59 +0800
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:21:01 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.3ms)
+  Rendered salons/_form.html.erb (3.6ms)
+  Rendered locations/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.6ms)
+  Rendered salons/_form.html.erb (3.4ms)
+  Rendered locations/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/locations.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/passes.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/salons.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/welcome.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/passes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/salons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-21 08:21:32 +0800
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSalon Load (0.1ms)[0m  SELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.3ms)
+  Rendered salons/_form.html.erb (5.5ms)
+  Rendered locations/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/salons.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/passes.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/locations.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/welcome.self-97bf12be2a7b71a68377d6e36d4d97115aefe7784a89b3a5bfcec7e0f38591f0.css?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/passes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/salons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-21 08:22:22 +0800
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateLocations (20160516111140)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160516111140"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Migrating to CreateSalons (20160516114946)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "salons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "topic" varchar, "detail_location" varchar, "longitude" float, "latitude" float, "time" varchar, "foreground_color" varchar, "background_color" varchar, "iBeacon" varchar, "detail_info" text, "guests" text, "help" text, "about" text, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_salons_on_location_id" ON "salons" ("location_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160516114946"]]
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePasses (20160516160124)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "passes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "serial_number" varchar, "authentication_token" varchar, "barcode_message" varchar, "user_name" varchar, "user_phone_number" varchar, "user_type" varchar, "real_name" varchar, "company_name" varchar, "github_id" varchar, "mail" varchar, "salon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_passes_on_salon_id" ON "passes" ("salon_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160516160124"]]
+  [1m[35m (0.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_passes_on_salon_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_passes_on_salon_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_salons_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_salons_on_location_id' AND type='index'
+[0m
+
+
+Started GET "/locations" for 127.0.0.1 at 2016-05-21 08:24:27 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 293ms (Views: 282.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations/new" for 127.0.0.1 at 2016-05-21 08:24:29 +0800
+Processing by LocationsController#new as HTML
+  Rendered locations/_form.html.erb (11.3ms)
+  Rendered locations/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/locations" for 127.0.0.1 at 2016-05-21 08:24:32 +0800
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYE5u9Ayd9RQiJktfYWWOLUHWRQKtRSg9d7m/ehQBaSZSRDK2Qr7+b+ztjcnc0XasEpUa59hQyetHiiYJLlkqQ==", "location"=>{"name"=>"北"}, "commit"=>"保存据点"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "北"], ["created_at", "2016-05-21 00:24:32.964173"], ["updated_at", "2016-05-21 00:24:32.964173"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/locations/1
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:24:32 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSalon Load (0.2ms)[0m  [1mSELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered salons/_form.html.erb (19.1ms)
+  Rendered locations/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/locations/1/salons" for 127.0.0.1 at 2016-05-21 08:26:10 +0800
+Processing by SalonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5I8ZtEA9Caee3+luCypxtlhdnrepB+IMvePtFg171ibWhUX2Dh4C3FAUL/i2nok3Cx7BUtwSA9qN0HRlNyOVQ==", "salon"=>{"name"=>"fff", "topic"=>"fff", "time"=>"2016-05-28T13:00-18:00", "detail_location"=>"美餐", "longitude"=>"116.309178", "latitude"=>"39.934223", "iBeacon"=>"71c4ac80-1ee6-11e6-b6ba-3e1d05defe78", "foreground_color"=>"rgb(45, 45, 45)", "background_color"=>"rgb(250, 250, 250)", "detail_info"=>"d", "guests"=>"d", "help"=>"d", "about"=>"我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。"}, "commit"=>"创建新一期沙龙", "location_id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "salons" ("name", "topic", "detail_location", "time", "detail_info", "guests", "help", "about", "longitude", "latitude", "foreground_color", "background_color", "iBeacon", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "fff"], ["topic", "fff"], ["detail_location", "美餐"], ["time", "2016-05-28T13:00-18:00"], ["detail_info", "d"], ["guests", "d"], ["help", "d"], ["about", "我们是一个邀请制的 iOS 社区，想做点有价值、高质量的事，让每个参与者都有所收获。"], ["longitude", 116.309178], ["latitude", 39.934223], ["foreground_color", "rgb(45, 45, 45)"], ["background_color", "rgb(250, 250, 250)"], ["iBeacon", "71c4ac80-1ee6-11e6-b6ba-3e1d05defe78"], ["location_id", 1], ["created_at", "2016-05-21 00:26:10.411485"], ["updated_at", "2016-05-21 00:26:10.411485"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/locations/1
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2016-05-21 08:26:10 +0800
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT "salons".* FROM "salons" WHERE "salons"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered salons/_salon.html.erb (0.9ms)
+  Rendered salons/_form.html.erb (4.4ms)
+  Rendered locations/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations/1/salons/1" for 127.0.0.1 at 2016-05-21 08:26:11 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"location_id"=>"1", "id"=>"1"}
+  [1m[35mSalon Load (0.2ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.2ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered passes/_form.html.erb (12.9ms)
+  Rendered salons/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:26:18 +0800
+Processing by PassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XfGtsP+r6AdHJCddnzmUriWwAiuHHE8I0kbpiAGU5v+1OYTB9pNkKqgfCEfFz0dMIP0PVBLIGI+KhiftzX2H8g==", "pass"=>{"real_name"=>"d", "user_name"=>"d", "company_name"=>"d", "github_id"=>"d", "mail"=>"d", "user_phone_number"=>"d", "user_type"=>"d"}, "commit"=>"创建Pass", "salon_id"=>"1"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passes" ("user_name", "user_phone_number", "user_type", "real_name", "company_name", "github_id", "mail", "salon_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_name", "d"], ["user_phone_number", "d"], ["user_type", "d"], ["real_name", "d"], ["company_name", "d"], ["github_id", "d"], ["mail", "d"], ["salon_id", 1], ["created_at", "2016-05-21 00:26:18.668683"], ["updated_at", "2016-05-21 00:26:18.668683"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "passes" SET "serial_number" = ?, "authentication_token" = ?, "barcode_message" = ?, "updated_at" = ? WHERE "passes"."id" = ?  [["serial_number", "79d53704eee670779f2b2761889e005f"], ["authentication_token", "7099c3f5527e6bff2ef85db1eddc056e"], ["barcode_message", "9de49f10cd36bf4406218f197362eead"], ["updated_at", "2016-05-21 00:26:18.670918"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/salons/1
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/salons/1" for 127.0.0.1 at 2016-05-21 08:26:18 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPass Load (0.0ms)[0m  SELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?  [["salon_id", 1]]
+  Rendered passes/_pass.html.erb (0.9ms)
+  Rendered passes/_form.html.erb (5.4ms)
+  Rendered salons/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wallet/79d53704eee670779f2b2761889e005f" for 127.0.0.1 at 2016-05-21 08:26:20 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"79d53704eee670779f2b2761889e005f"}
+  [1m[36mPass Load (0.2ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = '79d53704eee670779f2b2761889e005f')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//79d53704eee670779f2b2761889e005f.pkpass (0.1ms)
+Completed 200 OK in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/wallet/79d53704eee670779f2b2761889e005f" for 127.0.0.1 at 2016-05-21 08:26:20 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"79d53704eee670779f2b2761889e005f"}
+  [1m[35mPass Load (0.2ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '79d53704eee670779f2b2761889e005f')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//79d53704eee670779f2b2761889e005f.pkpass (0.1ms)
+Completed 200 OK in 19ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/salons/1/passes" for 127.0.0.1 at 2016-05-21 08:26:30 +0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for PassesController):
+  actionpack (4.2.6) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.2ms)
+
+
+Started GET "/salons/1" for 127.0.0.1 at 2016-05-21 08:26:32 +0800
+Processing by SalonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPass Load (0.1ms)[0m  [1mSELECT "passes".* FROM "passes" WHERE "passes"."salon_id" = ?[0m  [["salon_id", 1]]
+  Rendered passes/_pass.html.erb (0.4ms)
+  Rendered passes/_form.html.erb (2.7ms)
+  Rendered salons/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wallet/79d53704eee670779f2b2761889e005f" for 127.0.0.1 at 2016-05-21 08:26:35 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"79d53704eee670779f2b2761889e005f"}
+  [1m[35mPass Load (0.2ms)[0m  SELECT  "passes".* FROM "passes" WHERE (serial_number = '79d53704eee670779f2b2761889e005f')  ORDER BY "passes"."id" ASC LIMIT 1
+  [1m[36mSalon Load (0.1ms)[0m  [1mSELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//79d53704eee670779f2b2761889e005f.pkpass (0.1ms)
+Completed 200 OK in 17ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/wallet/79d53704eee670779f2b2761889e005f" for 127.0.0.1 at 2016-05-21 08:26:35 +0800
+Processing by PassesController#wallet as HTML
+  Parameters: {"serial_number"=>"79d53704eee670779f2b2761889e005f"}
+  [1m[36mPass Load (0.2ms)[0m  [1mSELECT  "passes".* FROM "passes" WHERE (serial_number = '79d53704eee670779f2b2761889e005f')  ORDER BY "passes"."id" ASC LIMIT 1[0m
+  [1m[35mSalon Load (0.1ms)[0m  SELECT  "salons".* FROM "salons" WHERE "salons"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Sent file /Users/Qing/Documents/GitHub/PassServer/public/assets/passes//79d53704eee670779f2b2761889e005f.pkpass (0.0ms)
+Completed 200 OK in 13ms (ActiveRecord: 0.4ms)
